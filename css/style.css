@@ -91,7 +91,7 @@ html{
 }
 
 .logo {
-    display: none;
+    display: flex;
 }
 
 body {

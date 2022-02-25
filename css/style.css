@@ -14,43 +14,49 @@
 /* Normalize
    ========================================================================== */
 @import url(normalize.css);
-
 /* Utilitaires
    ========================================================================== */
+
+
+
 /*** Harmoniser le modèle de boîte avec Box-Sizing ***/
 html {
-   box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *, 
 *::before, 
 *::after {
-   box-sizing: inherit;
+    box-sizing: inherit;
 }
-
-img {
-    max-width: 100%;
-}
+.descriptions
 
 figure {
     margin: 0px;
 }
 
+img{
+    max-width: 100%;
+}
+
+
+/* marges latérales sur écran étroit et centrage sur écran large */
 .layout-page{
-    padding:2rem;
-   }
-   @media(min-width:600px){
-    .layout-page{
-    max-width:1000px;
-    margin:auto;
+    padding:2rem 2rem 0;
+    background-color: white;
+}
+
+@media(min-width:600px){
+    .layout-page {
+        max-width:1000px;
+        margin:auto;
     }
-   }
-   
+}
 
 /* Charte typographique
    ========================================================================== */
 
- /**
+/**
  * Typographie responsive (Mobile First)
    ========================================================================
  * Les valeurs de taille de police suggérées ici sont à titre indicatif.
@@ -73,67 +79,31 @@ figure {
 /* Polices liées */
 /* copier ici l'instruction @import url('...'); proposé par Google Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=News+Cycle&family=Roboto+Condensed:wght@300;700&display=swap');
-
-
 /* Base décimale */
 html{
     font-size: 62.5%;
 }
 
-/* Mettre l'image en background*/
-
-@media(min-width:601px){
-
-.header{ 
-    background-image: url(../images/photo-montage_1000.jpg)
-}    
-}
-
-.logo {
-    display: flex;
-}
-
 body {
     /* Adapter la famille de polices selon le projet */
     font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 300px;
+    font-weight: 100;
     /* 16px pour toutes les largeurs d'écran */
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
     line-height: 1.375;
-    max-width: 100%;
+    background-image: url(../images/moroccan-flower.png);
 }
 @media (min-width: 600px) {
     body {
         line-height: 1.5;
-        font-size: 1.6rem;
     }
 }
 @media (min-width: 800px) {
     body {
         line-height: 1.75;
-        font-size: 1.6rem;
     }
-    
 }
-
-.nav__list.nav__list--sublist {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: antiquewhite;
-    
-  }
-  .nav__listItem {
-    padding: 0 .7em;
-    position: relative; /* Référence de positionnement pour le sous-menu */
-  }
-
-
 
 h1,
 h2,
@@ -141,7 +111,7 @@ h3,
 h4{
     /* Adapter la famille de polices selon le projet */
     font-family: 'Roboto Condensed', sans-serif;
-    font-weight:  700px;
+    font-weight: 500;
 }
 
 /* Hiérarchie responsive : plus proche = plus petit  &  plus loin = plus grand */
@@ -162,41 +132,35 @@ h1 { /* = 32px */
 
 h2 { /* = 24px */
     font-size: 2.4rem;
-}
-
-h2:first-of-type{
     margin-top: 0;
     line-height: 1;
 }
 
 
-h2 { /* = 18px */
+
+@media (min-width: 600px) {
+    h2 { /* = 32px */
+        font-size: 3.2rem;
+
+    }
+}
+@media (min-width: 800px) {
+    h2 { /* = 36px */
+        font-size: 3.6rem;
+    }
+}
+
+h3 { /* = 18px */
     font-size: 1.8rem;
 }
 @media (min-width: 600px) {
-    h2 { /* = 24px */
+    h3 {  /* = 24px */
         font-size: 2.4rem;
     }
 }
 @media (min-width: 800px) {
-    h2 { /* = 30px */
-        font-size: 3.0rem;
-    }
-}
-
-
-
-h3 { /* = 16px */
-    font-size: 1.6rem;
-}
-@media (min-width: 600px) {
-    h3 {  /* = 18px */
-        font-size: 1.8rem;
-    }
-}
-@media (min-width: 800px) {
-    h3 { /* = 22px */
-        font-size: 2.2rem;
+    h3 { /* = 30px */
+        font-size: 3rem;
     }
 }
 
@@ -214,76 +178,185 @@ h4 { /* = 16px */
     }
 }
 
-.nav__list--sublist { 
-    font-family: 'News Cycle', sans-serif;
-    font-weight: 300;
+/* Centrer l'introduction */
+.introduction {
+    text-align: center;
 }
 
-@media (min-width: 600px) {
-    article.description{  
-        
-        width: 33%;
-        padding: 1.2rem;
+/* Ajustement de la main*/
+main {
+    display: block;
+}
+
+/* Mettre l'image en background et ajuster le menu selon les médias*/
+@media(min-width:600px){
+    .header{
+    min-height: 433px;
+    background-image: url(../images/photo-montage_1000.jpg);
+    background-position: 0 48px;
+    background-size: contain; 
+    background-repeat: no-repeat;
+    font-size: 1.6rem;
+    }
+    
+    .nav--picture{
+        display:none;
     }
 }
 
-/* Séparation en colonne des articles.description */
+@media (min-width:800px) {
+    .header {
+        background-size : contain;
+    }
+}
 
+@media(min-width:601px){
+    .nav--header{
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        display: flex;
+    }
+}
+.nav--header{
+    flex-wrap: wrap;
+    display: flex;
+}
 
+/* LOGO */
+@media (min-width: 600px) {
+    .logo{
+        max-width: 250px;
+    }    
+}
+
+.logo {
+    flex-grow: 1;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+/* Séparation en trois colonne des articles.description */
 
 @media (min-width: 600px) {
-
     .descriptions {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    
-    }
-    
-.description {
-    flex: 0 1 33%;
-    padding: 1.2rem
-    }
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
     }
 
-    .encadres{
-    display: flex;
-    padding-top: 1rem;
+    .description {
+        flex: 0 1 33%;
+        padding: 1.2rem
     }
-        
-        
-        
-    .encadres__item{   
-    background-color:lightgrey;  
-    margin-right: 1.5rem;     
-    padding-top: 1rem;
-    /* padding: 1rem 1rem 1rem 0rem; */
-        
-    }
-        
-        
-        
-.encadres__item:nth-child(2) {    
-        background-color: lightgrey;
-    }
+}
 
-.nav__list {
+/* Séparation en deux colonnes des sous-articles de liste*/
+.nav__list{
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
-    background-color:burlywood;
+    background-color: black;
+    text-transform: uppercase;
+    overflow: hidden; 
+    margin-bottom: 0;
+}
+
+.nav__link, .nav__link--active .nav__link--footer{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.25rem;
+}
+
+/* Liste de navigation Header */
+.nav__list.nav__list--sublist{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background-color: White;
+    color: blue;
+    margin:0;
+    padding:0;
+    width: 100%;
+    order: 1;
+}
+
+@media (min-width: 600px) {
+    .nav--header .nav__list {
+        width: auto;
+    }
+}
+
+.nav__listItem {
+    padding: 0 .7em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    position: relative; /* Référence de positionnement pour le sous-menu */
+}
+
+  /* Liste de navigation Footer */
+.nav__list{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    background-color: black;
+    padding-left: 0;
+}
+ 
+.nav__listItem:nth-child(1){
+    background-color: lightblue;
+    color: orange;
+    text-decoration: none;
+}
+
+.nav__link--footer{
+    text-decoration: none;
+    color: white;
+}
+
+.nav__link--active{
+    text-decoration: none;
+    color: orange
+}
+
+/* Navigation et Surlignage*/
+
+.nav__link:hover, .nav__link--active:hover, .nav__link--footer:hover{
+    color: orange;
+}
+
+/* Application d'un background et séparation de la section en deux colonnes */
+.encadres{
+    display: flex;
     margin-top: 0%;
     margin-bottom: 0%;
-  }
-  .nav__listItem {
-    padding: 0 .7em;
-    position: relative; /* Référence de positionnement pour le sous-menu */
-  }
+}
+    
+.encadres__item{
+    background-color:lightgrey;
+    margin-right: 1.5rem; 
+    padding: 2rem 1rem 1rem 1rem; 
+}
+
+.encadres__item:nth-child(2) {
+    background-color: lightgrey;
+}
 
 .credits {
-    background-color:thistle;
+    padding-top: 2rem;
+    background-color:lightgray;
+    padding-right: 2rem;
+}
+
+.copyright {
+    text-align: center;
 }
 

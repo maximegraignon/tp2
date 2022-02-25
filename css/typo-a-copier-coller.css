@@ -55,12 +55,12 @@ h3,
 h4{
     /* Adapter la famille de polices selon le projet */
     font-family: 'Roboto Condensed', sans-serif;
-    font-weight:  70rem;
+    font-weight:  700px;
 }
 
 /* Hiérarchie responsive : plus proche = plus petit  &  plus loin = plus grand */
 h1 { /* = 32px */
-    font-size: 3.2rem;
+    font-size: 3.6rem;
 }
 @media (min-width: 600px) {
     h1 { /* = 40px */
@@ -115,7 +115,7 @@ h4 { /* = 16px */
     }
 }
 
-.nav__list--sublist {
+.nav__list--sublist { 
     font-family: 'News Cycle', sans-serif;
     font-weight: 300;
 }

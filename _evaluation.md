@@ -19,7 +19,8 @@
   ![](images/git-blame.png)  
   que cette `odieuse` usurpation d'identité remonte à seulement quelques `commit` et résulte d'un travail collaboratif + ou - bien géré.  
   Comme en [témoigne ce code](https://github.com/maximegraignon/tp2/commit/a5af01bede40a0e9238b0c02c6b37cffca1b870d)    
-  __Bref inscrire vos deux noms dans les crédits?!__
+  __Bref inscrire vos deux noms dans les crédits?!__  
+  Sachez qu'une remise d'un même fichier de code comme une fraude intellectuelle et valoir une note 0 pour toutes les personnes impliquées.
 
 - Bravo à @michelkingmalord et à toi pour la documentation de la stratégie d'intégration
 - Lors de la mise en ligne, éliminer les fichiers inutiles pour le Web (plusieurs fichiers .css inutilisés)
